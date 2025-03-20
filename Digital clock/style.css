@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    border: 0;
+}
+
+.digital-clock {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    border: 0.5rem solid #333;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.week {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.week div {
+    transition: color 0.3s ease-in-out;
+}
+
+.week .active {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.time {
+    font-family: "Courier New", monospace;
+    display: flex;
+    align-items: baseline;
+}
+
+.hour,
+.min,
+.dot {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.sec {
+    font-size: 3rem;
+    margin-left: 0.5rem;
+    color: #ccc;
+}
+
+.meridian {
+    font-size: 3rem;
+    margin-left: 1rem;
+    color: #aaa;
+}
+
+.dot {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
